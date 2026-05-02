@@ -79,11 +79,12 @@ Ce patch permet de désactiver les vérifications de root et de modification.
 ##   Étape 3 – Reconstruction et signature de l'APK
 Après modification, l'application est reconstruite et signée :
 
-bashapktool b uncrackable3 -o UnCrackable-Level3-patched.apk
+```bash
+apktool b uncrackable3 -o UnCrackable-Level3-patched.apk
 apksigner sign --ks "%USERPROFILE%\.android\debug.keystore" UnCrackable-Level3-patched.apk
 adb uninstall owasp.mstg.uncrackable3
 adb install -r UnCrackable-Level3-patched.apk
-
+```
 
 <img width="821" height="394" alt="image" src="https://github.com/user-attachments/assets/00b4a534-43d4-4f9f-96ee-06b61c9a6d8b" />
 <img width="502" height="305" alt="image" src="https://github.com/user-attachments/assets/6c77b4de-978c-41e6-bde1-2890f30fcd4a" />
